@@ -2,7 +2,7 @@
 #define MAXSIZE 100
 int a[MAXSIZE];
 int top = -1;
-int i,n;
+int i,n,j,k;
 void push(int x)
 {
     if (top == MAXSIZE - 1)
@@ -10,7 +10,7 @@ void push(int x)
         printf("Stack is full");
     }
     else
-    a[++top] = x;  //first inceases top to 0 and then assign value to th stack
+    a[++top] = x;  //first inceases top to 0 and then assign value to the stack
 }
 void pop()
 {
@@ -40,7 +40,7 @@ void print()
 }
 int main()
 {
-    int a,n;
+    int a,n,cont,p;
     printf("How many input you want to make: ");
     scanf("%d", &n);
     do{
@@ -52,11 +52,15 @@ int main()
     }
     while(i != n);
     
-    // push(10);
-    // print();
-    // push(34);
-    // print();
-    // pop();
-    // print();
-    // high();
+    printf("Do you wan to pop elements:(press 1 to continue)");
+    scanf("%d", &cont);
+    printf("How many elements you want to pop \n");
+    scanf("%d", &p);
+    if(cont == 1){
+        do{
+        pop();      
+        j++;
+        }while(j!=p);
+        print();
+    }
 }
