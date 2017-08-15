@@ -17,9 +17,9 @@ void dequeue(){
     printf("Queue is empty.\n");
     else if(front == rear){
     front=-1;
-    rear=-1;
     }
     else
+    rear=-1;
     front++;
 }
 void print()
